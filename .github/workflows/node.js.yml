@@ -4,6 +4,6 @@ steps:
   with:
     node-version: 14
     cache: 'npm'
-
+    cache-dependency-path: client/yarn-lock.json
 - run: npm ci
 - run: npm test
