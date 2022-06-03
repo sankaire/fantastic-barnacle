@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:tailwind": "tailwindcss build src/index.css -o public/tailwind.output.css",
+    "build:tailwind": "tailwindcss build src/index.css -o public/index.css",
     "prestart": "npm run build:tailwind",
     "prebuild": "npm run build:tailwind"
   },
