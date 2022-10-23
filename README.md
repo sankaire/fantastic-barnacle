@@ -33,6 +33,7 @@ inventory costs have lot of impact on the profitability of the firm and its succ
 - Nodejs - JavaScript runtime built on Chrome's V8 JavaScript engine.
 - Typescript - JavaScript with syntax for types.
 - ExpressJS - Fast, unopinionated, minimalist web framework for Node.js
+- MongoDB - MongoDB is a source-available cross-platform document-oriented database program
 - Reactjs - A JavaScript library for building user interfaces
 - TailwindCss - A utility-first CSS framework
 - Jest - Delightful JavaScript Testing Framework
