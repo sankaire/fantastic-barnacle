@@ -1,14 +1,3 @@
-const express = require("express")
-const app = express()
+import app from "./app";
 
-const homeRoute = require("./api/routes/home.route")
-
-app.use(express.json())
-
-app.use("/api/v1/home", homeRoute)
-
-const port = 5000
-
-app.listen(port, () => console.log(`api running on ${port} `))
-
-module.exports = app
+app.listen(5000, () => console.log(`Api running on http://localhost:5000/api`));
