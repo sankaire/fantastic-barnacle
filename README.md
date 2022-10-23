@@ -1,4 +1,8 @@
 # Inventory sytem
+## Table of Contents
+ - [Problem Statemet](#problem-statement)
+ - [Functional Requirements](#Functional-Requiremnts)
+ - [Non Functional Requirements](#Non-Functional-Requiremnts)
 ## Problem Statement
  inventory costs have lot of impact on the profitability of the firm and its success. Inventory management and its optimized decisions are depending on the identification of key success factors and right decisions at right moment. In  a  dynamic  market  environment,  it  is  necessary  to  focus  on  the  decision  making  and  the  factors  influencing decision making in order to optimize the results of inventory function. 
 ## Functional Requiremnts
