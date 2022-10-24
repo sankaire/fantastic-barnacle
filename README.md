@@ -110,4 +110,4 @@ yarn test
 ## Designs
 
 Home page design
-[Home Page](docs/screenshots/Homepage.png)
+[Home Page](/docs/screenshots/Homepage.png)
