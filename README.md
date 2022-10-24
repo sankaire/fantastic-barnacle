@@ -107,3 +107,8 @@ yarn dev
 ```
 yarn test
 ```
+
+## Designs
+
+Home page design
+[Home Page](docs/screenshots/Homepage.png)
