@@ -8,6 +8,7 @@
 - [Technologies](#Techonlogies)
 - [Start Client](#Start-Client)
 - [Start Server](#Start-Api)
+- [Designs](#Designs)
 
 ## problem-statement
 
@@ -110,4 +111,4 @@ yarn test
 ## Designs
 
 Home page design
-[Home Page](/docs/screenshots/Homepage.png)
+![Home Page](/docs/screenshots/Homepage.png)
