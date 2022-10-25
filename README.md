@@ -75,13 +75,13 @@ visit `http://localhost:3000`
 
 ## Start-Api
 
-- Now that you are in the client dir just add anothe terminal tab and follow the following steps
+- Now that you are in the client directory just add anothe terminal tab and follow the following steps
 
 ```
 cd ..
 ```
 
-- then you get into the server dir
+- then you get into the server directory
 
 ```
 cd server
