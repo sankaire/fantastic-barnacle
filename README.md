@@ -93,7 +93,7 @@ cd server
 yarn dev
 ```
 
-- to confirm that its running visit `http://localhost:5000/api` You should see
+- to confirm that its running visit `http://localhost:5000/api/v1` You should see
 
 ```json
 {
