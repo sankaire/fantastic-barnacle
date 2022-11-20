@@ -9,7 +9,7 @@
     "test": "jest",
     "dev": "ts-node-dev --poll server/index.ts",
     "build": "tsc",
-    "start": "concurrently \"node ./dist/server/index.js\" \"cd client && yarn dev\""
+    "start": "concurrently \"node ./dist/server/index.js\" \"cd client && yarn install && yarn dev\""
   },
   "dependencies": {
     "@types/bcrypt": "^5.0.0",
