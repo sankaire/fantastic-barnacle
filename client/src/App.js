@@ -12,7 +12,8 @@ const App = () => {
     }
   };
   return (
-    <div>
+    <div className="test">
+      <h1>Hello</h1>
       <button onClick={getData}>Click</button>
     </div>
   );
