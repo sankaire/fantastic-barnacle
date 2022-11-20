@@ -1,21 +1,19 @@
 import { render } from "react-dom";
 import axios from "axios";
-import { useState } from "react";
 const App = () => {
-  const [message, setMessage] = useState("");
   const getData = async () => {
     try {
       const data = await axios.get("https://umbrella-2gw5.onrender.com/api/v1");
       const res = data.data;
+      console.log(res);
       setMessage(res.message);
     } catch (error) {
-      console.log(error.response.data, error.response.status);
+      console.log(error.response);
     }
   };
-  getData();
   return (
     <div>
-      <h1>{message}</h1>
+      <button onClick={getData}>Click</button>
     </div>
   );
 };
