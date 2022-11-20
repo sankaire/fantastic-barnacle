@@ -9,10 +9,11 @@
     "test": "jest",
     "dev": "ts-node-dev --poll server/index.ts",
     "build": "tsc",
-    "start": "concurrently \"node ./dist/server/index.js\" \"cd client && yarn dev\""
+    "start": "concurrently \"node ./dist/server/index.js\" \"cd client && yarn install && yarn dev\""
   },
   "dependencies": {
     "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.14",
     "@types/jsonwebtoken": "^8.5.9",
     "@types/mongoose": "^5.11.97",
@@ -37,7 +38,6 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.4",
-    "@types/cors": "^2.8.12",
     "@types/jest": "^29.1.2",
     "babel-jest": "^29.1.2",
     "ts-jest": "^29.0.3"
