@@ -5,7 +5,7 @@ const App = () => {
   const [message, setMessage] = useState("");
   const getData = async () => {
     try {
-      const data = await axios.get("http://localhost:5000/api/v1");
+      const data = await axios.get("https://umbrella-2gw5.onrender.com/api/v1");
       const res = data.data;
       setMessage(res.message);
     } catch (error) {
