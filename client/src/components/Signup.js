@@ -19,7 +19,7 @@ const Signup = () => {
   async function handleSubmit() {
     try {
       const req = await axios.post(
-        "http://localhost:5000/api/v1/auth/signup",
+        "https://umbrella-2gw5.onrender.com/api/v1/auth/signup",
         body
       );
       const res = req.data;

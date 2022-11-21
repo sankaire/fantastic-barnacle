@@ -14,7 +14,7 @@ const Login = () => {
   async function handleSubmit() {
     try {
       const req = await axios.post(
-        "http://localhost:5000/api/v1/auth/login",
+        "https://umbrella-2gw5.onrender.com/api/v1/auth/login",
         body
       );
       const res = req.data;
