@@ -1,14 +1,9 @@
-import express, { NextFunction, Request, Response } from "express";
+import express, {  Request, Response } from "express";
 import authRouter from "./api/routes/auth.route";
-import connectDB from "./db/db.connect";
 import cors from "cors"
-const app = express();
-import dotenv from "dotenv";
-dotenv.config();
-
-const uri:string|any = process.env.MONGO_URI;
-
-connectDB(uri)
+import dbConnection from "./db/db.connect";
+dbConnection()
+const app = express()
 app.use(cors())
 app.use(express.json());
 app.get("/api/v1", (req: Request, res: Response): Response<object> => {
