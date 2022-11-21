@@ -1,22 +1,36 @@
 import { User } from "../schemas/Users";
-import bcrypt from "../utils/bcrypt";
+import bcrypt from "bcrypt";
 import createToken from "../utils/jwt";
 
 export const createUser = async (
   username: string,
   email: string,
-  phone: string,
+  company: string,
   password: string
 ): Promise<object> => {
-  const hashPass = await bcrypt.encrypt(password);
+  const hash = bcrypt.hashSync(password, 10)
   const newUser = new User({
     username: username,
     email: email,
-    phone: phone,
-    password: hashPass,
+    company: company,
+    password: hash,
   });
   const user = await newUser.save();
   const token = createToken(user._id.toString());
   return {user, token}
 };
 
+export const login = async(email:string, password:string):Promise<object> =>{
+  const user:any = await User.findOne({email:email})
+  if(!user){
+    return {message:"User not found. create an account"}
+  }
+  const savedPass = user.password
+  // const comparePass = bcrypt.compareSync(password,savedPass)
+  // console.log(comparePass)
+  // if(!comparePass){
+  //   const error ={message:"Wrong password"}
+  //   return error
+  // }
+  return user
+}
