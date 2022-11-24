@@ -1,6 +1,4 @@
-import { useNavigate } from "react-router-dom";
 const Navbar = () => {
-  const history = useNavigate();
   return (
     <nav className="nav">
       <div className="nav__left">
@@ -19,7 +17,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <button className="btn" onClick={() => history("/dashboard")}>
+      <button className="btn" onClick={() => (window.location = "/dashboard")}>
         Dashbord
       </button>
     </nav>
