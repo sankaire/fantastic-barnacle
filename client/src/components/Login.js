@@ -1,12 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const body = {
     email: email,
     password: password,
@@ -18,19 +17,20 @@ const Login = () => {
         body
       );
       const res = req.data;
-      localStorage.setItem("user", JSON.stringify(res));
       toast.success("Login Succes", {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
         theme: "light",
-        onClose: () => navigate("/dashboard"),
+        onClose: () => (window.location = "/dashboard"),
       });
+      localStorage.setItem("user", JSON.stringify(res));
     } catch (error) {
+      setLoading(false);
       toast.error(error.response.data.message, {
         position: "top-center",
         autoClose: 5000,
@@ -64,6 +64,7 @@ const Login = () => {
         onSubmit={(e) => {
           e.preventDefault();
           handleSubmit();
+          setLoading(true);
         }}
       >
         <label htmlFor="email">
@@ -88,7 +89,22 @@ const Login = () => {
             }}
           />
         </label>
-        <button className="btn">Login</button>
+        <button className="btn">
+          {loading ? (
+            <div class="lds-roller">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          ) : (
+            "Login"
+          )}
+        </button>
         <p>
           Don't have an acount? <a href="/signup">Create one.</a>
         </p>
