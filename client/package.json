@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel index.html",
-    "start":"serve -s dist",
+    "start": "serve -s dist",
     "build": "parcel build index.html"
   },
   "dependencies": {
@@ -15,7 +15,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-router-dom": "^6.4.3",
-    "react-toastify": "^9.1.1"
+    "react-toastify": "^9.1.1",
+    "serve": "^14.1.2"
   },
   "devDependencies": {
     "process": "^0.11.10"
