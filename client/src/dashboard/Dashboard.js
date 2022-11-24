@@ -1,7 +1,9 @@
+import Nav from "./Nav";
+
 const Dashbord = () => {
   return (
     <div>
-      <h1>Dashbord</h1>
+      <Nav />
     </div>
   );
 };
