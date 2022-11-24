@@ -11,15 +11,15 @@ export const signUp = async (req: Request, res: Response): Promise<object> => {
   try {
     const checkUser = await checkEmail(email);
     if (checkUser) {
-      return res.status(400).json({ message: "This email already exists" });
+      return res.status(500).json({ message: "This email already exists" });
     }
     const validateCompany = await CheckCompany(company);
     if (validateCompany) {
-      return res.status(400).json({ message: "This company already exists" });
+      return res.status(500).json({ message: "This company already exists" });
     }
     const user = await createUser(username, email, company, password);
     if (!user) {
-      return res.status(400).json({ message: "user not created" });
+      return res.status(500).json({ message: "user not created" });
     }
     return res.status(200).json({ user });
   } catch (error: any) {
