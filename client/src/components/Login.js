@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -26,7 +26,7 @@ const Login = () => {
         draggable: true,
         progress: undefined,
         theme: "light",
-        onClose: () => (window.location = "/dashboard"),
+        onClose: () => (window.location = "/"),
       });
       localStorage.setItem("user", JSON.stringify(res));
     } catch (error) {
