@@ -2,7 +2,7 @@ import Home from "../pages/Home";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 
-export default Dashboard = () => {
+const Dashboard = () => {
   return (
     <div>
       <Topbar />
@@ -14,3 +14,4 @@ export default Dashboard = () => {
     </div>
   );
 };
+export default Dashboard;
