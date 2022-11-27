@@ -5,28 +5,6 @@
   margin: 0;
   padding: 0;
 }
-/* nav bar */
-.nav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 20px;
-  cursor: pointer;
-  border-bottom: 2px gray solid;
-}
-.logo {
-  color: #1653ef;
-  font-size: 30px;
-}
-.nav__right > ul {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-}
-.nav__right > ul > li > a {
-  color: #1653ef;
-  padding: 8rem;
-}
 .btn {
   background-color: #1653ef;
   color: white;
@@ -35,27 +13,6 @@
   border: none;
   border-radius: 10px;
   font-size: 20px;
-}
-
-/* landing */
-.landing__page {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px;
-}
-.landing__page > span > h2 {
-  color: #1653ef;
-  font-size: 5rem;
-}
-.landing__page > span {
-  font-family: sans-serif;
-  font-size: 5rem;
-}
-.home_image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
 }
 /* login and signup */
 .login_container {
@@ -99,21 +56,7 @@ input {
   background-color: rgb(240, 240, 253);
   border-radius: 10px;
 }
-/* errors */
-.success {
-  color: #04ad1a;
-  background: #e4fde7;
-  border-radius: 8;
-  border: 1px solid #04ad1a;
-  align-items: center;
-  padding: 10px;
-}
-.success > h2{
-    text-align: center;
-}
-.error {
-  background-color: red;
-}
+
 /* loader */
 .lds-roller {
   display: inline-block;
@@ -198,4 +141,7 @@ input {
   100% {
     transform: rotate(360deg);
   }
+}
+#sidebar{
+  height: calc(100vh - 50px);
 }

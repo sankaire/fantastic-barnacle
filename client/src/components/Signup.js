@@ -83,7 +83,7 @@ const Signup = () => {
             }}
           />
         </label>
-        <label htmlFor="username">
+        <label htmlFor="usnot renderedername">
           <span>username</span>
           <input
             type="text"

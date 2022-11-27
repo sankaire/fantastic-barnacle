@@ -5,10 +5,9 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import Dashbord from "./dashboard/Dashboard";
-import LandingPage from "./sections/Landing_page";
 const user = localStorage.getItem("user");
 const App = () => {
   return (
@@ -20,8 +19,8 @@ const App = () => {
             element={!user ? <Signup /> : <Navigate to="/login" />}
           />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={!user ? <Login /> : <Dashbord />} />
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={!user ? <Login /> : <Dashboard />} />
+          {/* <Route path="/" element={<LandingPage />} /> */}
         </Routes>
       </div>
     </Router>

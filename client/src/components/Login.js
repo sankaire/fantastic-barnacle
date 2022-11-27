@@ -26,7 +26,7 @@ const Login = () => {
         draggable: true,
         progress: undefined,
         theme: "light",
-        onClose: () => (window.location = "/dashboard"),
+        onClose: () => (window.location = "/"),
       });
       localStorage.setItem("user", JSON.stringify(res));
     } catch (error) {
