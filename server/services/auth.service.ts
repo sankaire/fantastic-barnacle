@@ -29,11 +29,11 @@ export const login = async (
     return { message: "User not found. create an account" };
   }
   const savedPass = user.password;
-  const comparePass = await bcrypt.compare(password, savedPass);
-  if (!comparePass) {
-    const error = { message: "wrong password" };
-    return error;
-  }
+  // const comparePass = await bcrypt.compare(password, savedPass);
+  // if (!comparePass) {
+  //   const error = { message: "wrong password" };
+  //   return error;
+  // }
   return user;
 };
 export const checkEmail = async (email: string): Promise<boolean> => {
