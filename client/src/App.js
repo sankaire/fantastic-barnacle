@@ -20,7 +20,6 @@ const App = () => {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/" element={!user ? <Login /> : <Dashboard />} />
-          {/* <Route path="/" element={<LandingPage />} /> */}
         </Routes>
       </div>
     </Router>
