@@ -6,6 +6,7 @@ import Updateproduct from "./Updateproduct";
 export default function Products() {
     const [data, setData] = useState([]);
     const [openModal, setOpenModal] = useState(false);
+    const [openUpdateModal, setOpenUpdateModal] = useState(false);
     useEffect(() => {
         const getProducts = async () => {
             const products = await axios.get(
@@ -64,12 +65,12 @@ export default function Products() {
                                     Delete
                                 </span>
                                 <span
-                                    onClick={() => setOpenModal(true)}
+                                    onClick={() => setOpenUpdateModal(true)}
                                     className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                                 >
                                     Udate
                                 </span>{" "}
-                                <Updateproduct open={openModal} onClose={() => setOpenModal(false)} id={data._id} />
+                                <Updateproduct open={openUpdateModal} onClose={() => setOpenUpdateModal(false)} id={data._id} />
                             </td>
                         </tr>
                     ))}

@@ -28,10 +28,12 @@ export default function Sidebar() {
               <TrendingUp className="mr-2" />
               Sales
             </li>
-            <li className="p-5 flex rounded-xl hover:bg-gray-300">
-              <Store className="mr-2" />
-              Stores
-            </li>
+            <Link to="/stores">
+              <li className="p-5 flex rounded-xl hover:bg-gray-300">
+                <Store className="mr-2" />
+                Stores
+              </li>
+            </Link>
             <Link to="/products">
               <li className="p-5 flex rounded-xl hover:bg-gray-300">
                 <ShoppingBasket className="mr-2" />
