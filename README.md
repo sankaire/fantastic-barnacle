@@ -100,7 +100,7 @@ yarn dev
   "message": "Inventory app API, welcome 👀🙂"
 }
 ```
-
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/23828500-760a1495-b4cb-4295-99af-14cacf0e7f75?action=collection%2Ffork&collection-url=entityId%3D23828500-760a1495-b4cb-4295-99af-14cacf0e7f75%26entityType%3Dcollection%26workspaceId%3D05e708d6-8ee7-4b7e-928a-e7c6da94a59e)
 ## run-tests
 
 - to test the app run
