@@ -3,6 +3,7 @@ import authRouter from "./api/routes/auth.route";
 import cors from "cors";
 import dbConnection from "./db/db.connect";
 import productsRoute from "./api/routes/products.route";
+import storesRoute from "./api/routes/stores.route";
 dbConnection();
 const app = express();
 app.use(cors());
@@ -12,4 +13,5 @@ app.get("/api/v1", (req: Request, res: Response): Response<object> => {
 });
 app.use("/api/v1", authRouter);
 app.use("/api/v1/products", productsRoute);
+app.use("/api/v1/stores", storesRoute);
 export default app;
