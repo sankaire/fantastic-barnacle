@@ -5,6 +5,7 @@ import {
   Timeline,
   TrendingUp,
 } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 export default function Sidebar() {
   return (
     <div className="flex bg-gray-100 flex-1 sticky top-12" id="sidebar">
@@ -27,14 +28,18 @@ export default function Sidebar() {
               <TrendingUp className="mr-2" />
               Sales
             </li>
-            <li className="p-5 flex rounded-xl hover:bg-gray-300">
-              <Store className="mr-2" />
-              Stores
-            </li>
-            <li className="p-5 flex rounded-xl hover:bg-gray-300">
-              <ShoppingBasket className="mr-2" />
-              Products
-            </li>
+            <Link to="/stores">
+              <li className="p-5 flex rounded-xl hover:bg-gray-300">
+                <Store className="mr-2" />
+                Stores
+              </li>
+            </Link>
+            <Link to="/products">
+              <li className="p-5 flex rounded-xl hover:bg-gray-300">
+                <ShoppingBasket className="mr-2" />
+                Products
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

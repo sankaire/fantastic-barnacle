@@ -8,6 +8,8 @@ import {
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Products from "./pages/Products";
+import Stores from "./pages/Stores";
 const user = localStorage.getItem("user");
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/" element={!user ? <Login /> : <Dashboard />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/stores" element={<Stores />} />
         </Routes>
       </div>
     </Router>
